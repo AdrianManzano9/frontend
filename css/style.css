@@ -810,9 +810,7 @@ p {
 
 .single_features:hover i {
   color: #4EE8E0; }
-#headingOne,
-#headingTwo
-{
+.panel-title{
 backgrond-color: #49E433;
 }
 
