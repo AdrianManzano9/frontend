@@ -6,7 +6,7 @@ function isMobile() {
     var mobile = ['iphone', 'ipad', 'android', 'blackberry', 'nokia', 'opera mini', 'windows mobile', 'windows phone', 'iemobile'];
     for (var i in mobile)
         console.log(navigator.userAgent)
-        if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) return true;
+    if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) return true;
     return false;
 }
 
@@ -27,10 +27,10 @@ formulario.addEventListener('submit', (event) => {
         let date = document.querySelector('#subject').value
         let comment = document.querySelector('#message').value
 
-        let mensaje = 'send?phone=' + phone + '&text=*_Formulario_*%0A Nombre: ' + nombre + '%0A Teléfono: ' + number + '%0A Correo Electrónico?%0A' + email + '%0A Fecha de entrega: '+date+'%0A Descripción: '+comment+''
-        if(isMobile()) {
-            window.open(urlMobile + mensaje, '_blank')
-        }else{
+        let mensaje = 'send?phone=' + phone + '&text=*_Formulario_*%0A Nombre: ' + nombre + '/n Teléfono: ' + number + '%0A Correo Electrónico?%0A' + email + '%0A Fecha de entrega: ' + date + '%0A Descripción: ' + comment + ''
+        if (isMobile()) {
+        window.open(urlMobile + mensaje, '_blank')
+        } else {
             window.open(urlDesktop + mensaje, '_blank')
         }
         buttonSubmit.innerHTML = '<i class="fab fa-whatsapp"></i> Enviar WhatsApp'

@@ -1,4 +1,4 @@
-(function() {
+(function () {
 
     "use strict";
 
@@ -16,10 +16,8 @@
 
         if (window.pageYOffset > sticky) {
             header_navbar.classList.add("sticky");
-            logo.setAttribute("src", "assets/images/logo-2.svg")
         } else {
             header_navbar.classList.remove("sticky");
-            logo.setAttribute("src", "assets/images/logo.svg")
         }
 
 
@@ -99,3 +97,60 @@
     wow.init();
 
 })();
+const flecha = new Image(50, 50);
+flecha.src = "images/flecha.png";
+let index = 1;
+
+actualizarD("niños");
+index = 1;
+actualizarD("equipos");
+index = 1;
+actualizarD("niñas");
+index = 1;
+actualizarD("personalizadas");
+index = 1;
+actualizarD("PyT");
+
+
+
+function actualizarD(categoria) {
+    
+    let row = document.getElementById("row-"+`niñas`);
+    limpiar(categoria);
+    let lim = index + 4;
+    for (index; index <= lim; index++) {
+        var card = document.createElement("card");
+        card.setAttribute("class", `col-sm-4 col-md-2 card`);
+        var img = new Image();
+        img.src = `images/Reposteria/Niños/a (${index}).jpg`;
+        img.setAttribute("class", "card-img-top")
+        img.onerror = function () {
+            index = 1;
+            img.src = `images/Reposteria/niñas/a (${index}).jpg`;
+        }
+
+        card.appendChild(img);
+        row.appendChild(card);
+
+        const mas = document.createElement("button");
+        mas.appendChild(flecha)
+
+        mas.onclick = () => {
+            actualizarD(categoria);
+        }
+        row.appendChild(mas);
+    }
+
+
+
+    function limpiar(categoria) {
+    let row = document.getElementById("row-"+`${categoria}`);
+        while (row.firstChild) {
+            row.removeChild(row.lastChild);
+        }
+    }
+
+}
+
+
+
