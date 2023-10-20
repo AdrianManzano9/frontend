@@ -579,7 +579,14 @@ p {
 .single_features:hover i {
   color: #4EE8E0; }
 
-
+.card{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  height: 40vh;
+  background-color: rgba(128, 128, 128, 0.555);
+  margin: 8px;
+}
 /*===========================
         07.TEAM css
 ===========================*/
@@ -631,62 +638,6 @@ height: 750 px}
           .single_team .team_content .social li a:hover {
             color: #4EE8E0; }
 
-/*===========================
-      06.PRICING css
-===========================*/
-.pricing_area {
-  background-color: #F9F9F9; }
-
-.single_pricing {
-  background-color: #fff;
-  padding: 60px 50px; }
-  @media (max-width: 767px) {
-    .single_pricing {
-      padding: 40px 30px; } }
-  .single_pricing .pricing_title {
-    font-size: 24px;
-    font-weight: 600; }
-    @media (max-width: 767px) {
-      .single_pricing .pricing_title {
-        font-size: 20px; } }
-  .single_pricing .price {
-    color: #4EE8E0;
-    font-size: 44px;
-    margin-top: 25px;
-    font-weight: 700; }
-    @media (max-width: 767px) {
-      .single_pricing .price {
-        font-size: 38px; } }
-  .single_pricing .pricing_list li {
-    margin-top: 15px;
-    font-size: 16px;
-    font-weight: 300; }
-  .single_pricing .mian-btn {
-    height: 45px;
-    border: 1px solid #5A5872;
-    line-height: 43px;
-    text-align: center;
-    padding: 0 25px;
-    color: #4EE8E0;
-    -webkit-transition: all 0.3s ease-out 0s;
-    -moz-transition: all 0.3s ease-out 0s;
-    -ms-transition: all 0.3s ease-out 0s;
-    -o-transition: all 0.3s ease-out 0s;
-    transition: all 0.3s ease-out 0s;
-    margin-top: 30px; }
-    .single_pricing .mian-btn:hover {
-      background-color: rgba(90, 88, 114, 0.2); }
-  .single_pricing.active {
-    background-color: #4EE8E0; }
-    .single_pricing.active .pricing_title {
-      color: #fff; }
-    .single_pricing.active .price {
-      color: #fff; }
-    .single_pricing.active .pricing_list li {
-      color: #fff; }
-    .single_pricing.active .mian-btn {
-      background-color: #fff;
-      border-color: #fff; }
 
 
 /*===========================
@@ -798,6 +749,75 @@ height: 750 px}
   .single_blog.blog_2 .blog_content p {
     margin-top: 15px; }
 
+
+/*===========================
+    10.CONTACT css
+===========================*/
+.contact_area {
+  position: relative;
+  z-index: 5; }
+  .contact_area::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(43, 42, 61, 0.9);
+    z-index: -1; }
+
+p.form-message.success, p.form-message.error {
+  font-size: 16px;
+  color: #2B2A3D;
+  background: #F9F9F9;
+  padding: 10px 15px;
+  margin-top: 30px;
+  background-color: #fff;
+  margin-left: 15px; }
+  p.form-message.success.form-message.error, p.form-message.error.form-message.error {
+    color: #f00; }
+
+.single_form {
+  margin-top: 30px; }
+  .single_form input,
+  .single_form textarea {
+    width: 100%;
+    height: 55px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 0 25px;
+    font-size: 16px;
+    color: #fff;
+    background: none;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s; }
+    .single_form input:focus,
+    .single_form textarea:focus {
+      border-color: #fff; }
+  .single_form textarea {
+    height: 170px;
+    resize: none;
+    padding-top: 15px; }
+    .boton{
+	display: block;
+	width: 100%;
+	height: 50px;
+	background-color: #48bb78;
+	border: solid 2px #48bb78;
+	color: #fff;
+	border-radius: 5px;
+	font-weight: 600;
+	font-size: 18px;
+	box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.boton:hover{
+	background-color: #2F855A;
+	border: solid 2px #2F855A;
+	transition: .5s;
+}
 /*===========================
     11.FOOTER css
 ===========================*/
@@ -878,126 +898,3 @@ height: 750 px}
     background-color: #4EE8E0; }
 
 
-/*===========================
-    09.BLOG css
-===========================*/
-.single_blog .blog_image img {
-  width: 100%; }
-
-.single_blog .blog_content {
-  margin-top: 25px; }
-  .single_blog .blog_content .blog_title a {
-    font-size: 24px;
-    font-weight: 600;
-    color: #2B2A3D;
-    -webkit-transition: all 0.3s ease-out 0s;
-    -moz-transition: all 0.3s ease-out 0s;
-    -ms-transition: all 0.3s ease-out 0s;
-    -o-transition: all 0.3s ease-out 0s;
-    transition: all 0.3s ease-out 0s; }
-    @media (max-width: 767px) {
-      .single_blog .blog_content .blog_title a {
-        font-size: 20px; } }
-    .single_blog .blog_content .blog_title a:hover {
-      color: #4EE8E0; }
-  .single_blog .blog_content p {
-    margin-top: 15px; }
-  .single_blog .blog_content .more {
-    font-size: 16px;
-    font-weight: 500;
-    color: #5A5872;
-    margin-top: 15px;
-    -webkit-transition: all 0.3s ease-out 0s;
-    -moz-transition: all 0.3s ease-out 0s;
-    -ms-transition: all 0.3s ease-out 0s;
-    -o-transition: all 0.3s ease-out 0s;
-    transition: all 0.3s ease-out 0s; }
-    .single_blog .blog_content .more:hover {
-      color: #4EE8E0; }
-
-.single_blog.blog_2 .blog_content {
-  margin-top: 0;
-  padding-left: 20px; }
-  @media (max-width: 767px) {
-    .single_blog.blog_2 .blog_content {
-      padding-left: 0;
-      padding-top: 20px; } }
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    .single_blog.blog_2 .blog_content {
-      padding-left: 20px;
-      padding-top: 0; } }
-  .single_blog.blog_2 .blog_content .blog_title a {
-    font-size: 20px; }
-  .single_blog.blog_2 .blog_content p {
-    margin-top: 15px; }
-
-
-
-/*===========================
-    10.CONTACT css
-===========================*/
-.contact_area {
-  position: relative;
-  z-index: 5; }
-  .contact_area::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(43, 42, 61, 0.9);
-    z-index: -1; }
-
-p.form-message.success, p.form-message.error {
-  font-size: 16px;
-  color: #2B2A3D;
-  background: #F9F9F9;
-  padding: 10px 15px;
-  margin-top: 30px;
-  background-color: #fff;
-  margin-left: 15px; }
-  p.form-message.success.form-message.error, p.form-message.error.form-message.error {
-    color: #f00; }
-
-.single_form {
-  margin-top: 30px; }
-  .single_form input,
-  .single_form textarea {
-    width: 100%;
-    height: 55px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    padding: 0 25px;
-    font-size: 16px;
-    color: #fff;
-    background: none;
-    -webkit-transition: all 0.3s ease-out 0s;
-    -moz-transition: all 0.3s ease-out 0s;
-    -ms-transition: all 0.3s ease-out 0s;
-    -o-transition: all 0.3s ease-out 0s;
-    transition: all 0.3s ease-out 0s; }
-    .single_form input:focus,
-    .single_form textarea:focus {
-      border-color: #fff; }
-  .single_form textarea {
-    height: 170px;
-    resize: none;
-    padding-top: 15px; }
-    .boton{
-	display: block;
-	width: 100%;
-	height: 50px;
-	background-color: #48bb78;
-	border: solid 2px #48bb78;
-	color: #fff;
-	border-radius: 5px;
-	font-weight: 600;
-	font-size: 18px;
-	box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1);
-}
-
-.boton:hover{
-	background-color: #2F855A;
-	border: solid 2px #2F855A;
-	transition: .5s;
-}
